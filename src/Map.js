@@ -5,8 +5,6 @@ import {
   Geography,
   Annotation,
   ZoomableGroup,
-  Sphere,
-  Graticule,
 } from "react-simple-maps";
 //couleur de la map selon le nombre min/max
 import { scaleLinear } from "d3-scale";
@@ -83,8 +81,6 @@ const Map = () => {
             zoom = {position.zoom}
             center={position.coordinates}
             onMoveEnd={handleMoveEnd}>
-            <Sphere stroke="#000" strokeWidth={0.3}/>
-            <Graticule stroke="#000" strokeWidth={0.3}/>
               <Geographies geography={geoUrl}>
                 {({geographies}) =>
                 geographies.map((geo, index)=>{
